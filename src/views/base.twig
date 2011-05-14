@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link href="/blueprint/screen.css" rel="stylesheet" type="text/css" /> 
+        <link href="/blueprint/ie.css" rel="stylesheet" type="text/css" /> 
 
+        {% block headscripts %}{% endblock %}
     </head>
     <body>
-        {% block content %}{% endblock %}
+        <div class="container">
+            <div class="span-24 title">
+                <a href="/"><span class="large">Italia</span></a>
+            </div>
+
+            {% block content %}{% endblock %}
+        </div>
+        {% block bodyscripts %}{% endblock %}
     </body>
 </html>
