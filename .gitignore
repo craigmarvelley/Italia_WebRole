@@ -4,3 +4,5 @@
 Global.asax
 bin
 php
+.htaccess
+.DS_Store
