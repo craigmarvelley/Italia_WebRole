@@ -21,7 +21,7 @@ $app->get('/', function () use ($app) {
 // Create
 $app->get('/new', function () use ($app) {
     
-    return $app['twig']->render('items/add.twig', array(
+    return $app['twig']->render('items/new.twig', array(
         
     ));
     
