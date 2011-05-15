@@ -1,0 +1,21 @@
+{% extends "base.twig" %}
+   
+{% block content %}
+	<a href="/new">Upload file</a>
+	<br />
+	<table cellspacing="0" cellpadding="0" border="0">
+		<tr>
+			<th>Name</th>
+			<th>Last Modified</th>
+			<th>Size</th>
+			<th>Options</th>
+		</tr>
+    {% for item in items %}
+    	<tr>
+    		<td>{{item.name}}</td>
+    		<td>{{item.lastModified}}</td>
+    		<td>{{item.size}}</td>
+    		<td><a href="{{item.url}}">Open</a></td>
+    {% endfor %}
+    </table>
+{% endblock %}
