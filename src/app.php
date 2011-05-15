@@ -18,6 +18,7 @@ $app->error(function (\Exception $e) {
 $blobStorageClient = BlobStorageClientFactory::getClient();
 if(! $blobStorageClient->containerExists('items')) {
 	$blobStorageClient->createContainer('items');
+	$blobStorageClient->setContainerAcl('items', Microsoft_WindowsAzure_Storage_Blob::ACL_PUBLIC);
 }
 
 // List items of content
